@@ -1,61 +1,67 @@
-
 <h1 align="center">
-    <img alt="GoBarber Web" src="https://res.cloudinary.com/lukemorales/image/upload/v1564533051/readme_logos/gobarber_hg5ddx.png" />
-    <br>
-    GoBarber Web
+    <img src="https://user-images.githubusercontent.com/58868651/77219318-88174b00-6b13-11ea-924d-1a6acdcbd939.png" />
 </h1>
-<p align="center">BarberShop system that connects clients and providers.</p>
 
+<p align="center">
+Barbershop system that connects clients and providers - RESTful API made with Node.js
+</p>
 
-<hr />
+💈 About GoBarber
+------------------
+This project is a system of a fictional barbershop called GoBarber. The full system has a [**web version**](https://github.com/riltonfranzonee/gobarber) made with ReactJS, an exclusive area for providers, where they are able to list all their appointments, change personal info and recieve notifications everytime a new appointment is created (also via email). The application also has a [**mobile version**](https://github.com/riltonfranzonee/gobarber-mobile) made with React Native, an exclusive area for clients, where they are able to create a new appointment with their favorite provider based on the available schedule. Besides that, the client is able to cancel the appointment (must be at most 2 hours before the appointment). All this system is served by a [**RESTful API**](https://github.com/riltonfranzonee/gobarber-api) made with Node.js
 
-## Features
+:wrench: Used technologies:
+----------------------
+This RESTful API has a great level of complexity, combinig different types of databases, user authentication, email firing, file upload and a lot of CRUD's. To help me with all this work I used the following technologies:
 
-A Node.js API built with Express and all the latest tools and best practices in development!
+- [**Insomnia**](https://insomnia.rest/)
+- [**NodeJS**](https://nodejs.org/en/)
+- [**ExpressJS**](https://expressjs.com/)
+- [**Nodemon**](https://nodemon.io/)
+- [**Docker**](https://www.docker.com/)
+- [**PostgreSQL**](https://www.postgresql.org/)
+- [**MongoDB**](https://www.mongodb.com/)
+- [**Redis**](https://redis.io/)
+- [**Sequelize**](https://sequelize.org/)
+- [**Yup**](https://github.com/jquense/yup)
+- [**jwt**](https://www.npmjs.com/package/jsonwebtoken/)
+- [**bcryptJS**](https://www.npmjs.com/package/bcryptjs)
+- [**multer**](https://github.com/expressjs/multer)
+- [**date-fns**](https://date-fns.org/docs/Getting-Started)
 
-- **Express** — A web framework for Node
-- **Sequelize** — SQL dialect ORM for Node.js
-- **PostgreSQL** - Relational database
-- **MongoDB** — document-based database
-- **Redis** — key-value data model
-- **Yup** - Object schema validation
-- **Sentry** - cross-platform application monitoring
-- **Nodemailer** - Send e-mails with Node.JS
-- **Lint** — ESlint/Prettier/Editor Config
+## :information_source: How to use this project
+To clone and run this application, you'll need Git, NodeJS, Yarn and Docker.
 
-## Dependencies
-
-- [Node.js](https://nodejs.org/en/) 8.0.0 ou >
-- [Yarn](https://yarnpkg.com/pt-BR/docs/install)
-- [Docker](https://www.docker.com/)
-
-## Prerequisites
-
-_In the next few weeks, I plan to include Docker directly in the repository with docker-compose, until there this step is required._
-
-To run this server you will need three containers running on your machine.
-
-To do so, you will need to run the following commands:
+The first thing you need to do is to run these three containers on your machine:
 
 - `docker run --name redisbarber -p 6379:6379 -d -t redis:alpine`;
 - `docker run --name mongobarber -p 27017:27017 -d -t mongo`;
 - `docker run --name some-postgres -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres`;
 
-_Remember: If you restart your machine, you will need to start again the server with `docker start <container_id>`._
+Then you just need to run the following commands:
 
-## Getting started
+```bash
+# Clone this repository
+$ git clone https://github.com/riltonfranzonee/gobarber-api
 
-_Consider checking out the FrontEnd [repository](https://github.com/riltonfranzonee/gobarber-web)!_
+# Go into the repository
+$ cd gobarber-api
 
-1. Clone this repo using `https://github.com/riltonfranzonee/gobarber-api.git`
-2. Move to the appropriate directory: `cd gobarber-api`.<br />
-3. Run `yarn` to install dependencies.<br />
-4. Copy the `.env.example` file and rename it to `.env`.<br/>
-5. Add all the values for the environment variables.<br/>
-6. Run `yarn start` and `yarn queue` to run the servers at `http://localhost:3000`.
+# Install dependencies
+$ yarn
 
-Made with ♥ by Rilton Franzone :wave: [Get in touch!](https://www.linkedin.com/in/rilton-franzone-b975a7198/)
+# Run the app
+$ yarn dev
+```
 
-
+After that you can use [*Insomnia REST Client*](https://insomnia.rest/) on *port 3333" to use the routes!
 
 
+:speech_balloon: Reach me
+----------
+
+[*In case you want to reach me*](https://www.linkedin.com/in/rilton-franzone-b975a7198/)
+
+
+
+Thank you for taking a look at my project! Made with ♥
