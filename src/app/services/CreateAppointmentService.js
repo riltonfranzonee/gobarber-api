@@ -9,7 +9,7 @@ import Notification from '../schemas/Notification';
 import Cache from '../../lib/Cache';
 
 class CreateAppointmentService {
-  async run({ provider_id, user_id, date }) {
+  async run({ provider_id, user_id, date, connectedUsers, io }) {
     // check if provider_id is a  provider
 
     const isProvider = await User.findOne({
@@ -64,13 +64,18 @@ class CreateAppointmentService {
       { locale: pt }
     );
 
-    await Notification.create({
+    const notification = await Notification.create({
       content: `Novo agendamento de ${user.name} para ${formattedDate}`,
       user: provider_id,
     });
 
-    // invalidate cache
+    const ownerSocket = connectedUsers[provider_id];
 
+    if (ownerSocket) {
+      io.to(ownerSocket).emit('notification', notification);
+    }
+
+    // invalidate cache
     await Cache.invalidatePrefix(`user:${user.id}:appointments`);
     return appointment;
   }

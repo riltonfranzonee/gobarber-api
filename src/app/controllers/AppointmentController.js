@@ -56,6 +56,8 @@ class AppointmentController {
       provider_id,
       user_id: req.userId,
       date,
+      connectedUsers: req.connectedUsers,
+      io: req.io,
     });
 
     return res.json(appointment);
