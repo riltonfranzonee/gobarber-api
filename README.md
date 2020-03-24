@@ -3,16 +3,16 @@
 </h1>
 
 <p align="center">
-Barbershop system that connects clients and providers - RESTful API made with Node.js
+Barbershop system that connects clients and providers - REST API made with Node.js
 </p>
 
 💈 About GoBarber
 ------------------
-This project is a system of a fictional barbershop called GoBarber. The full system has a [**web version**](https://github.com/riltonfranzonee/gobarber) made with ReactJS, an exclusive area for providers, where they are able to list all their appointments, change personal info and recieve notifications everytime a new appointment is created (also via email). The application also has a [**mobile version**](https://github.com/riltonfranzonee/gobarber-mobile) made with React Native, an exclusive area for clients, where they are able to create a new appointment with their favorite provider based on the available schedule. Besides that, the client is able to cancel the appointment (must be at most 2 hours before the appointment). All this system is served by a [**RESTful API**](https://github.com/riltonfranzonee/gobarber-api) made with Node.js
+This project is a system of a fictional barbershop called GoBarber. The full system has a [**web version**](https://github.com/riltonfranzonee/gobarber) made with ReactJS, an exclusive area for providers, where they are able to list all their appointments, change personal info and recieve notifications everytime a new appointment is created (also via email). The application also has a [**mobile version**](https://github.com/riltonfranzonee/gobarber-mobile) made with React Native, an exclusive area for clients, where they are able to create a new appointment with their favorite provider based on the available schedule. Besides that, the client is able to cancel the appointment (must be at most 2 hours before the appointment). All this system is served by a [**REST API**](https://github.com/riltonfranzonee/gobarber-api) made with Node.js
 
 :wrench: Used technologies:
 ----------------------
-This RESTful API has a great level of complexity, combinig different types of databases, user authentication, email firing, file upload and a lot of CRUD's. To help me with all this work I used the following technologies:
+This REST API has a great level of complexity, combinig different types of databases, user authentication, email firing, file upload and a lot of CRUD's. To help me with all this work I used the following technologies:
 
 - [**Insomnia**](https://insomnia.rest/)
 - [**NodeJS**](https://nodejs.org/en/)
